@@ -1,0 +1,29 @@
+@import "../variables.scss";
+
+.sys-btns {
+  display: flex;
+  margin: 15px;
+  background-color: rgb(16, 16, 34);
+
+  &--button {
+    margin-right: 8px;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    &:hover {
+      cursor: pointer;
+    }
+
+    &:first-child {
+      background-color: $sys-red;
+    }
+
+    &:nth-child(2) {
+      background-color: $sys-yellow;
+    }
+
+    &:nth-child(3) {
+      background-color: $sys-green;
+    }
+  }
+}
