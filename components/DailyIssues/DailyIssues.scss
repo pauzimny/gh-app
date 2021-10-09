@@ -1,0 +1,16 @@
+@import "../../utils/variables.scss";
+
+.daily-issues {
+  border-radius: 0 5px 5px 0;
+  width: 529px;
+  padding-left: 10px;
+  background-color: rgb(246, 246, 246);
+
+  &__date {
+    margin: 0;
+    font-size: 12px;
+    font-family: $font-primary;
+    line-height: 4.167;
+    color: rgb(138, 137, 149);
+  }
+}
