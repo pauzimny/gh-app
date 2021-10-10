@@ -1,13 +1,14 @@
 import React from "react";
 import AppSideBar from "../AppSideBar/AppSideBar";
 import "./IssuesContainer.scss";
-import DailyIssues from "../DailyIssues/DailyIssues";
+
+import IssuesList from "../IssuesList/IssuesList";
 
 const IssuesContainer = () => {
   return (
     <div className="issues-container">
       <AppSideBar />
-      <DailyIssues />
+      <IssuesList />
     </div>
   );
 };

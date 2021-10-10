@@ -11,9 +11,9 @@ const StarSvg = ({ open }) => (
   >
     <path
       d="M8.500,0.000 L11.301,5.028 L16.999,6.112 L13.033,10.302 L13.753,16.000 L8.500,13.561 L3.247,16.000 L3.967,10.302 L0.001,6.112 L5.699,5.028 L8.500,0.000 "
-      class="cls-1"
+      className="cls-1"
       stroke={open ? "rgb(224, 224, 224)" : "none"}
-      stroke-width={open ? "1" : "none"}
+      strokeWidth={open ? "1" : "none"}
     />
   </svg>
 );

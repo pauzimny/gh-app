@@ -6,9 +6,9 @@ const Issue = ({ name, id, open }) => {
   return (
     <li className="issue">
       <div className="issue__name">{name}</div>
-      <div>
+      <button className="issue__button">
         <StarSvg open={open} />
-      </div>
+      </button>
     </li>
   );
 };
