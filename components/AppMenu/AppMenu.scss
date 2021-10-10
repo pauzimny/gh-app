@@ -5,11 +5,23 @@
 }
 
 .menu-entry {
-  display: flex;
-  align-items: center;
-  height: 50px;
-  padding: 0 15px;
-  color: #fff;
+  list-style: none;
+
+  &__button {
+    display: flex;
+    align-items: center;
+    border: none;
+    width: 100%;
+    height: 50px;
+    padding: 0 15px;
+    background-color: transparent;
+    color: #fff;
+
+    &:hover {
+      cursor: pointer;
+      background-color: rgb(41, 42, 72);
+    }
+  }
 
   &__type {
     margin-left: 10px;
