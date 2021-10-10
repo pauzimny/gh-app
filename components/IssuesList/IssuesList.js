@@ -1,19 +1,23 @@
-import React from "react";
-import { useEffect, useState } from "react";
-import "./IssuesList.scss";
+import React, { useContext, useEffect, useState } from "react";
 import DailyIssues from "../DailyIssues/DailyIssues";
-import { issuesMock } from "../../utils/mocks/issues-mock";
+import { IssuesContext } from "../../state/IssuesContext";
+import { filterEntries } from "../../utils/helpers/helpers";
 import _ from "lodash";
+import "./IssuesList.scss";
 
 const IssuesList = () => {
   const [groupedIssues, setGroupedIssues] = useState();
+  const { issues, currentType } = useContext(IssuesContext);
 
   useEffect(() => {
-    const grouped = _.mapValues(_.groupBy(issuesMock, "date"), (list) =>
-      list.map((i) => i)
+    const filteredIssues = filterEntries(currentType, issues);
+    const groupedByDate = _.mapValues(
+      _.groupBy(filteredIssues, "date"),
+      (list) => list.map((i) => i)
     );
-    setGroupedIssues(grouped);
-  }, []);
+
+    setGroupedIssues(groupedByDate);
+  }, [currentType, issues]);
 
   return (
     <div className="issues-list">
